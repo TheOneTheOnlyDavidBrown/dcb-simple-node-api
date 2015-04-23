@@ -5,7 +5,7 @@ Simple node api designed to spin up for frontend testing when the backend doesn'
 ###Installation
 
 * `bower install dcb-simple-node-api`
-* `cd node_modules/dcb-simple-node-api`
+* `cd bower_components/dcb-simple-node-api`
 * Run `npm install`
 * Run `nodemon server.js`
 
