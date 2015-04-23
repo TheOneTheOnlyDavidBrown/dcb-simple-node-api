@@ -6,7 +6,7 @@ Simple node api designed to spin up for frontend testing when the backend doesn'
 ```
 Pull down code
 Run `npm install`
-Run `node server.js`
+Run `nodemon server.js`
 ```
 
 The default path will be http://localhost:8080/api/
