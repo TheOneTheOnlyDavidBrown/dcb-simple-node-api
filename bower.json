@@ -1,0 +1,21 @@
+{
+  "name": "dcb-simple-node-api",
+  "version": "0.0.1",
+  "homepage": "https://github.com/TheOneTheOnlyDavidBrown/dcb-simple-node-api",
+  "authors": [
+    "David Brown"
+  ],
+  "description": "Simple Node API for quick spinup",
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
