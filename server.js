@@ -18,7 +18,7 @@ var router = express.Router(); // get an instance of the express Router
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
   res.json({
-    message: 'root response'
+    message: 'root response',
   });
 });
 
@@ -44,10 +44,10 @@ router.get('/beer/:id', function(req, res) {
   response = {
     id: 32112,
     style: 'farmhouse',
-    abv: '7%'
-  }
+    abv: '7%',
+  };
   res.send(response);
-})
+});
 
 router.route('/beer')
   .post(function(req, res) {
@@ -60,16 +60,16 @@ router.route('/beer')
     response = [{
       id: 98098,
       style: 'lager',
-      abv: '6%'
+      abv: '6%',
     }, {
       id: 32112,
       style: 'ale',
-      abv: '5%'
+      abv: '5%',
     }, {
       id: 32112,
       style: 'farmhouse',
-      abv: '7%'
-    }]
+      abv: '7%',
+    }];
     res.send(response);
   });
 
