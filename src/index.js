@@ -1,8 +1,8 @@
-var express = require('express'); // call express
-var app = express(); // define our app using express
-var bodyParser = require('body-parser');
-var env = require('dotenv').load();
-var cors = require('cors');
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+
+let app = express(); // define our app using express
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(cors());
 
-var port = process.env.PORT || 8080; // set our port
+var port = process.env.PORT || 3000; // set our port
 var router = express.Router(); // get an instance of the express Router
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
@@ -21,6 +21,8 @@ router.get('/', function(req, res) {
     message: 'root response',
   });
 });
+
+// EXAMPLE ROUTES
 
 router.route('/demo')
   .post(function(req, res) {
@@ -34,45 +36,42 @@ router.route('/demo')
     });
   });
 
-router.get('/not200', function(req, res) {
+router.get('/status400', function(req, res) {
   res.status(400);
   res.send('sending status code 400');
 });
 
-router.get('/beer/:id', function(req, res) {
+router.get('/item/:id', function(req, res) {
   res.status(200);
-  response = {
+  let response = {
     id: 32112,
-    style: 'farmhouse',
-    abv: '7%',
+    name: `path: /item/:id1, id: ${req.params.id}`,
   };
   res.send(response);
 });
 
-router.route('/beer')
+router.route('/item')
   .post(function(req, res) {
-    response = req.body;
+    let response = req.body;
     console.log(req.body.id);
     response.id = 123123123123;
     res.send(response);
   })
   .get(function(req, res) {
-    response = [{
+    let response = [{
       id: 98098,
-      style: 'lager',
-      abv: '6%',
+      name: 'item 1',
     }, {
       id: 32112,
-      style: 'ale',
-      abv: '5%',
+      name: 'item 2',
     }, {
       id: 32112,
-      style: 'farmhouse',
-      abv: '7%',
+      name: 'item 3',
     }];
     res.send(response);
   });
 
+// END EXAMPLE ROUTES
 
 // additional routes go here
 

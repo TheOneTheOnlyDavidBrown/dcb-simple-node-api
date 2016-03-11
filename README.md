@@ -4,15 +4,20 @@ Simple node api designed to spin up for frontend testing when the backend doesn'
 
 ###Installation
 
-* `bower install dcb-simple-node-api`
-* `cd bower_components/dcb-simple-node-api`
+* `npm install dcb-simple-node-api`
+* cd into installation directory
 * Run `npm install`
-* Run `nodemon server.js`
+* Run `npm run dev` for development environments (runs nodemon)
+* Run `npm start` for production
 
+Primary server file will be in `src/index.js` and is written in es6/2015
 
 The default path will be http://localhost:8080/api/
 
 The port can be configured in the .env file
+
+#### TODO:
+* make this a generator
 
 Licensed under the MIT License
 
