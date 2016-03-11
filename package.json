@@ -1,6 +1,6 @@
 {
   "name": "dcb-simple-node-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "simple node api for split stack",
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",
